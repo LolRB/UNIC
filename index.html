@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UNIC Universidad para la Innovación y la Cultura</title>
+    <link
+      rel="stylesheet"
+      href="css/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styling/navbar.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+  <div class="container-fluid">
+    <!-- LOGO -->
+    <a class="navbar-brand p-0" href="index.html">
+      <img src="./assets/logo-header.png" alt="UNIC Logo" height="60">
+    </a>
+
+    <!-- BOTÓN HAMBURGUESA -->
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
+      aria-controls="mainNav"
+      aria-expanded="false"
+      aria-label="Menu"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- MENÚ EXPANDIDO -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html" id="nav-nosotros">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="oferta.html">Oferta Académica</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="nav-programas"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Programas Federales
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="nav-programas">
+            <li><a class="dropdown-item" href="proni.html">PRONI</a></li>
+            <li><a class="dropdown-item" href="pfsee.html">PFSEE</a></li>
+            <li><a class="dropdown-item" href="peei.html">PEEI</a></li>
+            <li><a class="dropdown-item" href="prodep.html">PRODEP</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="instalaciones.php">Instalaciones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="callcenter.php">Call Center</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="nav-catalogos"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Catálogos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="nav-catalogos">
+            <li>
+              <a class="dropdown-item" href="archivos/ft/...IA_Docentes.pdf" target="_blank">
+                IA Docentes
+              </a>
+            </li>
+            <!-- resto de ítems -->
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="administrativos.php">Administrativos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto.html">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <header></header>
+    <footer
+      class="text-center wow slideInUp"
+      style="visibility: visible; animation-name: slideInUp"
+    >
+      <br />
+      <div class="row">
+        <div class="col-md-8 col-xs-12 text-center">
+          Copyright © 2019, Universidad para la Innovación y la Cultura A.C.,
+          UNIC, México
+        </div>
+        <div class="col-md-4 col-xs-12 text-center">
+          <a href="archivos/Aviso_Privacidad_UNIC.pdf" target="_blank"
+            >Aviso de privacidad</a
+          >
+        </div>
+      </div>
+      <br />
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/classie.js"></script>
+    <script src="js/menu.js"></script>
+    <script>
+      $(function () {
+        $(".menu__item").on("click", function () {
+          // remove “current” from all...
+          $(".menu__item--current").removeClass("menu__item--current");
+          // ...and add it to the one we just clicked
+          $(this).addClass("menu__item--current");
+        });
+      });
+    </script>
+  </body>
+</html>

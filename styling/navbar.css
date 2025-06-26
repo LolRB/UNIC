@@ -1,0 +1,190 @@
+/* ————————————————————————————————
+   1) Container: logo + menu side by side
+   ———————————————————————————————— */
+/* 1) Convierte tu container-fluid en un flex-row */
+nav.navbar .container-fluid {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+/* 2) Anula el width:100% de .col-xs-12 SOLO dentro de este nav */
+nav.navbar .container-fluid > .col-xs-12 {
+  flex: none !important;
+  width: auto !important;
+}
+
+/* ————————————————————————————————
+   3) Main menu styling
+   ———————————————————————————————— */
+.menu__list {
+  display: flex !important;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu__item {
+  position: relative;
+  margin: 0 8px;
+}
+
+.menu__link {
+  display: block;
+  padding: 22px 12px; /* vertically center in ~80px navbar */
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1b264f; /* navy text */
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+}
+
+/* dropdown caret */
+.menu__item.dropdown .menu__link::after {
+  content: "▾";
+  margin-left: 6px;
+  font-size: 10px;
+  vertical-align: middle;
+}
+
+/* ==== Tipografía y espaciado ==== */
+.navbar-light .navbar-nav .nav-link {
+  color: #1b264f !important;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.75rem 0.5rem;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+}
+
+/* ==== Hover ==== */
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #8dc63f !important;
+  background: rgba(141, 198, 63, 0.05);
+}
+
+/* ==== Estado “activo” ==== */
+.navbar-light .navbar-nav .nav-link.active {
+  color: #8dc63f !important;
+  background: rgba(141, 198, 63, 0.1);
+  border: 2px solid #8dc63f;
+}
+
+/* ==== Dropdown items ==== */
+.navbar-light .dropdown-menu {
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-light .dropdown-menu .dropdown-item {
+  color: #1b264f;
+  font-weight: 500;
+}
+
+.navbar-light .dropdown-menu .dropdown-item:hover {
+  background: #f4f4f4;
+}
+
+/* ————————————————————————————————
+   Logo flush: sin padding arriba/abajo
+   ———————————————————————————————— */
+.navbar {
+  /* elimina el padding vertical por defecto */
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.navbar-brand {
+  /* quita cualquier padding interno */
+  padding: 0 !important;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* haz que la imagen ocupe toda la altura del .navbar-brand */
+.navbar-brand img {
+  display: block;
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ————————————————————————————————
+   4) “Active” tab styling
+   ———————————————————————————————— */
+.menu__item--current .menu__link {
+  color: #8dc63f; /* green text */
+  border: 2px solid #8dc63f; /* green outline */
+  background: rgba(141, 198, 63, 0.1);
+}
+
+/* ————————————————————————————————
+   5) Hover states
+   ———————————————————————————————— */
+.menu__link:hover {
+  color: #8dc63f;
+}
+
+/* ————————————————————————————————
+   6) Dropdown menu
+   ———————————————————————————————— */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 180px;
+  padding: 6px 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+}
+.menu__item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1b264f;
+  white-space: nowrap;
+}
+.dropdown-menu li a:hover {
+  background: #f4f4f4;
+}
+
+/* make the navbar itself the positioning context */
+nav.navbar {
+  position: relative;
+}
+
+/* only on mobile (same breakpoint as navbar-expand-lg) */
+@media (max-width: 991.98px) {
+  /* pull the collapsed menu out of the flow */
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 1000;
+    /* optional drop shadow so it floats above content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* ensure the inner UL still stacks vertically */
+  .navbar-collapse .navbar-nav {
+    flex-direction: column;
+  }
+}
