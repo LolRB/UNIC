@@ -1,0 +1,79 @@
+/* banners.css - Styles for the .banner-home component */
+
+/* Ensure the banner container is positioned and overflows hidden */
+.banner-home {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 60vh;       /* use viewport height; adjust as needed */
+  min-height: 400px;  /* ensure a minimum */
+}
+
+/* Full-width responsive image */
+.banner-home img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95%;
+  object-fit: cover;
+}
+
+/* Wrapper for overlay + text: centers vertically and defines padding */
+.banner-text-container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 2rem 0;      /* vertical padding controls faded bar height */
+  pointer-events: none;
+}
+
+/* Full-width faded rectangle behind text only */
+.banner-text-container .banner-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+/* Text block: limited width and preserved styling */
+.banner-text-container .banner-text {
+  position: relative;
+  z-index: 1;
+  margin-left: 5%;     /* indent from left */
+  max-width: 900px;    /* keeps text from spanning too wide */
+  padding: 0 1rem;     /* horizontal padding */
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  text-align: left;
+}
+
+/* Heading inside banner text */
+.banner-text-container .banner-text h1 {
+  font-size: 2.5rem;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* Highlighted text spans */
+.banner-text-container .highlight {
+  background-color: #70a341;
+  color: #fff;
+  padding: 0 0.1em;
+  margin: 0;
+  border-radius: 2px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .banner-text-container .banner-text h1 {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .banner-text-container .banner-text h1 {
+    font-size: 1.75rem;
+  }
+}

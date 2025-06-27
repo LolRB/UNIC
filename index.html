@@ -16,10 +16,18 @@
     />
     <link rel="stylesheet" href="styling/main.css" />
     <link rel="stylesheet" href="styling/navbar.css" />
+    <link rel="stylesheet" href="styling/banners.css" />
   </head>
   <body>
+    <!-- Navbar -->
     <div id="navbar-placeholder"></div>
-    <header></header>
+
+    <!-- Banner -->
+    <div id="banner-placeholder"></div>
+    <!-- Page Content -->
+     <div id="home-placeholder"></div>
+
+    <!-- Footer -->
     <div id="footer-placeholder"></div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -39,6 +47,7 @@
           .catch(console.error);
       }
       includeHTML("navbar-placeholder", "/partials/navbar.html");
+      includeHTML("banner-placeholder", "/partials/banners/home.html");
       includeHTML("footer-placeholder", "/partials/footer.html");
     </script>
   </body>

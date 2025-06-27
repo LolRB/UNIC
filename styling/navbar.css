@@ -65,16 +65,16 @@ nav.navbar .container-fluid > .col-xs-12 {
 
 /* ==== Hover ==== */
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #8dc63f !important;
+  color: #70a341 !important;
   background: rgba(141, 198, 63, 0.05);
-  border: 2px solid #8dc63f
+  border: 2px solid #70a341
 }
 
 /* ==== Estado “activo” ==== */
 .navbar-light .navbar-nav .nav-link.active {
-  color: #8dc63f !important;
+  color: #70a341 !important;
   background: rgba(141, 198, 63, 0.1);
-  border: 2px solid #8dc63f;
+  border: 2px solid #70a341;
 }
 
 /* ==== Dropdown items ==== */
@@ -121,8 +121,8 @@ nav.navbar .container-fluid > .col-xs-12 {
    4) “Active” tab styling
    ———————————————————————————————— */
 .menu__item--current .menu__link {
-  color: #8dc63f; /* green text */
-  border: 2px solid #8dc63f; /* green outline */
+  color: #70a341; /* green text */
+  border: 2px solid #70a341; /* green outline */
   background: rgba(141, 198, 63, 0.1);
 }
 
@@ -130,7 +130,7 @@ nav.navbar .container-fluid > .col-xs-12 {
    5) Hover states
    ———————————————————————————————— */
 .menu__link:hover {
-  color: #8dc63f;
+  color: #70a341;
 }
 
 /* ————————————————————————————————
