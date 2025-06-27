@@ -1,0 +1,40 @@
+/* main.css - Global stylesheet for general background */
+
+/* Reset default margins and paddings */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Set global background color */
+body {
+  background-color: rgba(
+    241,
+    241,
+    248,
+    1
+  ); /* Full opacity equivalent to rgba(241,241,248,255) */
+}
+
+/* Navbar background same as body */
+nav.navbar {
+  background-color: rgba(241, 241, 248, 1) !important;
+}
+
+/* Footer styling & sticky */
+footer {
+  background-color: rgba(35, 63, 134, 1) !important;
+  color: #fff; /* ensure text is visible on dark background */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Prevent content hidden by footer */
+body {
+  padding-bottom: 80px; /* adjust based on footer's actual height */
+}

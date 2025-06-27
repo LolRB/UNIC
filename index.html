@@ -18,111 +18,9 @@
     <link rel="stylesheet" href="styling/navbar.css" />
   </head>
   <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm"
-    >
-      <div class="container-fluid">
-        <!-- LOGO -->
-        <a class="navbar-brand p-0" href="index.html">
-          <img src="./assets/logo-header.png" alt="UNIC Logo" height="60" />
-        </a>
-
-        <!-- BOTÓN HAMBURGUESA -->
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mainNav"
-          aria-controls="mainNav"
-          aria-expanded="false"
-          aria-label="Menu"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- MENÚ EXPANDIDO -->
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto align-items-center">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html" id="nav-nosotros"
-                >Nosotros</a
-              >
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="nav-ofertas"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Ofertas Académicas
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="nav-programas">
-                <li><a class="dropdown-item" href="proni.html">Capacitación docente</a></li>
-                <li><a class="dropdown-item" href="pfsee.html">Diplomados</a></li>
-                <li><a class="dropdown-item" href="peei.html">Educación continua</a></li>
-                <li><a class="dropdown-item" href="prodep.html">Cursos de IA</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="nav-programas"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Programas Federales
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="nav-programas">
-                <li><a class="dropdown-item" href="proni.html">PRONI</a></li>
-                <li><a class="dropdown-item" href="pfsee.html">PFSEE</a></li>
-                <li><a class="dropdown-item" href="peei.html">PEEI</a></li>
-                <li><a class="dropdown-item" href="prodep.html">PRODEP</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="callcenter.php">Call Center</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="catalogos.php">Catálogos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="instalaciones.php">Instalaciones</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="administrativos.php">Administrativos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
+    <div id="navbar-placeholder"></div>
     <header></header>
-    <footer
-      class="text-center wow slideInUp"
-      style="visibility: visible; animation-name: slideInUp"
-    >
-      <br />
-      <div class="row">
-        <div class="col-md-8 col-xs-12 text-center">
-          Copyright © 2019, Universidad para la Innovación y la Cultura A.C.,
-          UNIC, México
-        </div>
-        <div class="col-md-4 col-xs-12 text-center">
-          <a href="archivos/Aviso_Privacidad_UNIC.pdf" target="_blank"
-            >Aviso de privacidad</a
-          >
-        </div>
-      </div>
-      <br />
-    </footer>
+    <div id="footer-placeholder"></div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -133,17 +31,15 @@
       integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
       crossorigin="anonymous"
     ></script>
-    <script src="js/classie.js"></script>
-    <script src="js/menu.js"></script>
     <script>
-      $(function () {
-        $(".menu__item").on("click", function () {
-          // remove “current” from all...
-          $(".menu__item--current").removeClass("menu__item--current");
-          // ...and add it to the one we just clicked
-          $(this).addClass("menu__item--current");
-        });
-      });
+      function includeHTML(id, url) {
+        fetch(url)
+          .then((res) => res.text())
+          .then((html) => (document.getElementById(id).innerHTML = html))
+          .catch(console.error);
+      }
+      includeHTML("navbar-placeholder", "/partials/navbar.html");
+      includeHTML("footer-placeholder", "/partials/footer.html");
     </script>
   </body>
 </html>
