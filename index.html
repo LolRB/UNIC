@@ -24,8 +24,11 @@
 
     <!-- Banner -->
     <div id="banner-placeholder"></div>
+    
     <!-- Page Content -->
-     <div id="home-placeholder"></div>
+    <section id="info-cards" class="py-5 mb-5">
+      <div id="homeCards-placeholder"></div>
+    </section>
 
     <!-- Footer -->
     <div id="footer-placeholder"></div>
@@ -39,6 +42,17 @@
       integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
       crossorigin="anonymous"
     ></script>
+    <!-- Funcion para ocultar el index.html de la barra del buscador web -->
+    <script>
+      (function () {
+        const p = window.location.pathname;
+        if (p.endsWith("index.html")) {
+          // drop the index.html part without reloading
+          history.replaceState(null, "", p.replace(/index\.html$/, ""));
+        }
+      })();
+    </script>
+    <!-- Agregado de partials -->
     <script>
       function includeHTML(id, url) {
         fetch(url)
@@ -48,6 +62,7 @@
       }
       includeHTML("navbar-placeholder", "/partials/navbar.html");
       includeHTML("banner-placeholder", "/partials/banners/home.html");
+      includeHTML("homeCards-placeholder", "/partials/cards/home.html");
       includeHTML("footer-placeholder", "/partials/footer.html");
     </script>
   </body>

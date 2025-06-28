@@ -21,6 +21,7 @@
 .navbar-light .nav-link {
   color: #1b264f;
   font-weight: 600;
+  font-size: 0.92rem;
   text-transform: uppercase;
 }
 .navbar-light .nav-link:hover,
