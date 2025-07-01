@@ -28,17 +28,3 @@ footer {
   background-color: rgba(35, 63, 134, 1) !important;
   color: #fff; /* ensure text is visible on dark background */
 }
-
-/* Home Cards */
-
-#home-cards .card-text {
-  text-align: justify;
-}
-
-@media (min-width: 768px) {
-  #home-cards {
-    position: relative; /* para controlar el z-index */
-    margin-top: -100px; /* o -10rem, ajusta hasta que solape como quieres */
-    z-index: 5; /* para que queden encima del banner */
-  }
-}
