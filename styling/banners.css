@@ -30,6 +30,16 @@
   pointer-events: none;
 }
 
+.banner-text-container.callcenterbanner {
+   /* 2) Remove the centering transform */
+  transform: none !important;
+  
+  /* 3) Cancel the original top */
+  top: auto !important;
+  /* 4) Anchor from the bottom instead */
+  bottom: 15% !important;  /* tweak this value as needed */
+}
+
 /* Full-width faded rectangle behind text only */
 .banner-text-container .banner-overlay {
   position: absolute;
