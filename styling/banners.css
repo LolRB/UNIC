@@ -34,7 +34,7 @@
 .banner-text-container .banner-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(3, 6, 46, 0.4);
   pointer-events: none;
 }
 
@@ -46,7 +46,6 @@
   max-width: 900px; /* keeps text from spanning too wide */
   padding: 0 1rem; /* horizontal padding */
   color: #fff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   text-align: left;
 }
 
