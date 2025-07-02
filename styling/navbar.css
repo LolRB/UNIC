@@ -36,3 +36,35 @@
   border-radius: 0.25rem;
   color: #8dc63f !important;
 }
+
+/* 1) Pon la flechita con ::after en el mismo enlace */
+.dropdown-link::after {
+  content: "▾";
+  font-size: 0.75rem;
+  margin-left: 0.25rem;
+  vertical-align: middle;
+  transition: transform 0.2s;
+}
+
+/* 2) Hover mantiene la flecha girada y muestra el menú */
+.navbar-nav .nav-item:hover > .dropdown-link::after {
+  transform: rotate(180deg);
+}
+.navbar-nav .nav-item:hover > .dropdown-menu {
+  display: block;
+}
+
+/* 3) Asegura posición absoluta del menú */
+.navbar-nav .nav-item {
+  position: relative;
+}
+.navbar-nav .dropdown-menu {
+  top: 100%;
+  left: 0;
+  margin-top: 0;
+}
+
+/* 4) Evita Bootstrap tratando de ocultarlo */
+.navbar-nav .dropdown-menu {
+  display: none; /* por defecto oculto */
+}
