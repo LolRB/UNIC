@@ -56,6 +56,18 @@
 
 /*------------------- CATÁLOGOS ------------------------------*/
 
+/* transición a todas las cards dentro de catalogos */
+.hover-effect .card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* estado hover: sube ligeramente y aumenta sombra */
+.hover-effect .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  z-index: 2; /* para que flote sobre las demás */
+}
+
 .custom-orange-border {
   border-bottom: 4px solid rgba(241, 145, 0, 255) !important;
 }
@@ -70,4 +82,38 @@
 
 .custom-purple-border {
   border-bottom: 4px solid rgba(146, 54, 131, 255) !important;
+}
+
+/*------------------- OFERTAS ACADÉMICAS ------------------------------*/
+
+/* contenedor flex que envuelve todas las tarjetas */
+.ofertas-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centra la hilera */
+  gap: 2rem; /* espacio entre tarjetas */
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+/* cada tarjeta toma un ancho base y crece/encioge */
+.oferta-card {
+  flex: 1 1 180px; /* base 180px, puede crecer ó encoger */
+  max-width: 260px; /* opcional: límite de crecimiento */
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.oferta-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  z-index: 2; /* para que flote sobre las demás */
+}
+
+/* imagen dentro de la tarjeta */
+.oferta-card__img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
