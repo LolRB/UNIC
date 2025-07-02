@@ -30,7 +30,7 @@
   pointer-events: none;
 }
 
-.banner-text-container.callcenterbanner {
+.banner-text-container.modifiedbanner {
    /* 2) Remove the centering transform */
   transform: none !important;
   
