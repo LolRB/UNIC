@@ -21,8 +21,7 @@
 .navbar-light .nav-link {
   color: #1b264f;
   font-weight: 600;
-  font-size: 0.92rem;
-  text-transform: uppercase;
+  font-size: 1.15rem;
 }
 .navbar-light .nav-link:hover,
 .navbar-light .nav-link.active {

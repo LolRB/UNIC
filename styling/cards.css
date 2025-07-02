@@ -34,10 +34,10 @@
 /* full-bleed CTA gray bar */
 .callcenter-cta {
   position: relative;
-  width: 100vw;            /* tan ancho como el viewport */
-  left: 50%;               /* compensa el margin */
-  margin-left: -50vw;      /* centra el bloque en el viewport */
-  padding: 3rem 0;         /* conserva tu py-5 (≈3rem arriba y abajo) */
+  width: 100vw; /* tan ancho como el viewport */
+  left: 50%; /* compensa el margin */
+  margin-left: -50vw; /* centra el bloque en el viewport */
+  padding: 3rem 0; /* conserva tu py-5 (≈3rem arriba y abajo) */
   box-sizing: border-box;
   background-color: rgb(218, 218, 233);
 }
@@ -57,4 +57,22 @@
 /* pequeño gap arriba para separar del bloque anterior */
 .callcenter-cta {
   margin-top: 2rem;
+}
+
+/* CATÁLOGOS  */
+
+.custom-orange-border {
+  border-bottom: 4px solid rgba(241, 145, 0, 255) !important;
+}
+
+.custom-teal-border {
+  border-bottom: 4px solid rgba(1, 143, 131, 255) !important;
+}
+
+.custom-blue-border {
+  border-bottom: 4px solid rgba(24, 93, 164, 255) !important;
+}
+
+.custom-purple-border {
+  border-bottom: 4px solid rgba(146, 54, 131, 255) !important;
 }

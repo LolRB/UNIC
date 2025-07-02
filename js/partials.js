@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const bannerMap = {
     "/": "/partials/banners/home.html",
     "/index.html": "/partials/banners/home.html",
+    "/pages/ofertasacad.html": "/partials/banners/ofertasacad.html",
     "/pages/callcenter.html": "/partials/banners/callcenter.html",
     "/pages/catalogos.html": "/partials/banners/catalogos.html",
     "/pages/instalaciones.php": "/partials/banners/instalaciones.html",
-    // añade aquí nuevas rutas…
   };
   const bannerPartial = bannerMap[path] || bannerMap["/"];
   includeHTML("banner-placeholder", bannerPartial).catch(console.error);
@@ -50,10 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const contentMap = {
     "/": "/partials/cards/home.html",
     "/index.html": "/partials/cards/home.html",
+    "/pages/ofertasacad.html": "/partials/cards/ofertasacad.html",
     "/pages/callcenter.html": "/partials/cards/callcenter.html",
     "/pages/catalogos.html": "/partials/cards/catalogos.html",
     "/pages/instalaciones.php": "/partials/cards/instalaciones.html",
-    // añade aquí nuevas rutas…
   };
   const contentPartial = contentMap[path] || contentMap["/"];
   includeHTML("homeCards-placeholder", contentPartial).catch(console.error);
