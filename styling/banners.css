@@ -31,13 +31,13 @@
 }
 
 .banner-text-container.modifiedbanner {
-   /* 2) Remove the centering transform */
+  /* 2) Remove the centering transform */
   transform: none !important;
-  
+
   /* 3) Cancel the original top */
   top: auto !important;
   /* 4) Anchor from the bottom instead */
-  bottom: 15% !important;  /* tweak this value as needed */
+  bottom: 15% !important; /* tweak this value as needed */
 }
 
 /* Full-width faded rectangle behind text only */

@@ -12,6 +12,127 @@
   }
 }
 
+/*------------------- OFERTAS ACADÉMICAS ------------------------------*/
+
+/* contenedor flex que envuelve todas las tarjetas */
+.ofertas-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centra la hilera */
+  gap: 2rem; /* espacio entre tarjetas */
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+/* cada tarjeta toma un ancho base y crece/encioge */
+.oferta-card {
+  flex: 1 1 180px; /* base 180px, puede crecer ó encoger */
+  max-width: 260px; /* opcional: límite de crecimiento */
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.oferta-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  z-index: 2; /* para que flote sobre las demás */
+}
+
+/* imagen dentro de la tarjeta */
+.oferta-card__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*--------------------- CAPACITACIÓN DOCENTE -------------------------------------------*/
+
+/* Contenedor flex para todas las tarjetas */
+.capacitaciones-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; /* espacio entre tarjetas */
+  padding: 1rem 0;
+}
+
+/* Cada tarjeta */
+.cap-card {
+  flex: 1 1 300px; /* base 240px, puede crecer/encoger */
+  max-width: 360px; /* evita que en pantallas gigantes sean demasiado anchas */
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #70a341;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cap-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  border-color: #8dc63f; /* refuerza el verde al pasar el cursor */
+}
+
+/* Imagen superior */
+.cap-card__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Cuerpo con título y párrafo */
+.cap-card__body {
+  padding: 0.75rem;
+  flex-grow: 1;
+}
+.cap-card__body h5 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: #1b264f;
+}
+.cap-card__body p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* Pie de tarjeta con botón full-width */
+.cap-card__footer {
+  background-color: #70a341;
+}
+.cap-card__footer a {
+  display: block;
+  padding: 0.5rem 0;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+.cap-card__footer a:hover {
+  background-color: #639c33;
+}
+
+/* Wrapper que fuerza proporción 4:3 o 1:1 si lo prefieres cuadrado */
+.cap-card__media {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* antes 1/1, ahora 4x3 => más ancho y menos alto */
+  overflow: hidden; /* recorta lo que salga del contenedor */
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+/* La imagen ocupa todo el wrapper y se recorta centrada */
+.cap-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* mantiene proporción y recorta */
+}
+
 /*--------------------- CALL CENTER -------------------------------------------*/
 
 /* CSS específico para las imágenes de Call Center */
@@ -82,38 +203,4 @@
 
 .custom-purple-border {
   border-bottom: 4px solid rgba(146, 54, 131, 255) !important;
-}
-
-/*------------------- OFERTAS ACADÉMICAS ------------------------------*/
-
-/* contenedor flex que envuelve todas las tarjetas */
-.ofertas-flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* centra la hilera */
-  gap: 2rem; /* espacio entre tarjetas */
-  margin: 0 auto;
-  padding: 1rem 0;
-}
-
-/* cada tarjeta toma un ancho base y crece/encioge */
-.oferta-card {
-  flex: 1 1 180px; /* base 180px, puede crecer ó encoger */
-  max-width: 260px; /* opcional: límite de crecimiento */
-  border-radius: 0.5rem;
-  overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.oferta-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  z-index: 2; /* para que flote sobre las demás */
-}
-
-/* imagen dentro de la tarjeta */
-.oferta-card__img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
