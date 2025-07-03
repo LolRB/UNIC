@@ -44,7 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "/pages/cursos-IA.html": "/partials/banners/cursos-IA.html",
     "/pages/callcenter.html": "/partials/banners/callcenter.html",
     "/pages/catalogos.html": "/partials/banners/catalogos.html",
-    "/pages/instalaciones.php": "/partials/banners/instalaciones.html",
+    "/pages/instalaciones.html": "/partials/banners/instalaciones.html",
+    "/pages/administrativos.html": "/partials/banners/administrativos.html",
   };
   const bannerPartial = bannerMap[path] || bannerMap["/"];
   includeHTML("banner-placeholder", bannerPartial).catch(console.error);
@@ -59,7 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "/pages/cursos-IA.html": "/partials/cards/cursos-IA.html",
     "/pages/callcenter.html": "/partials/cards/callcenter.html",
     "/pages/catalogos.html": "/partials/cards/catalogos.html",
-    "/pages/instalaciones.php": "/partials/cards/instalaciones.html",
+    "/pages/instalaciones.html": "/partials/cards/instalaciones.html",
+    "/pages/administrativos.html": "/partials/cards/administrativos.html",
   };
   const contentPartial = contentMap[path] || contentMap["/"];
   includeHTML("homeCards-placeholder", contentPartial).catch(console.error);
