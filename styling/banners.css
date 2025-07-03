@@ -97,3 +97,9 @@
   margin: 0;
   padding: 0;
 }
+
+/* Sólo para el banner de Diplomados */
+.banner-home.banner-diplomados > img {
+  /* Centra horizontalmente y desplaza el foco de recorte 35% hacia abajo */
+  object-position: center 35%;
+}
