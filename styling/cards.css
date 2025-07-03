@@ -133,6 +133,17 @@
   object-fit: cover; /* mantiene proporción y recorta */
 }
 
+/*--------------------- Cursos IA -------------------------------------------*/
+
+/* ————— Cursos IA: sólo dos por fila en desktop ————— */
+@media (min-width: 992px) {
+  .cursos-ia-flex .cap-card {
+    /* Cálculo: 2 tarjetas menos el gap */
+    flex: 0 0 calc(50% - 1rem);
+    max-width:  calc(50% - 1rem);
+  }
+}
+
 /*--------------------- CALL CENTER -------------------------------------------*/
 
 /* CSS específico para las imágenes de Call Center */
