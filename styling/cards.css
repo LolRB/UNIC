@@ -133,6 +133,77 @@
   object-fit: cover; /* mantiene proporción y recorta */
 }
 
+/*--------------------- Educacion Continua -------------------------------------------*/
+
+/*———— específico para estirar 3 por fila en desktop ————*/
+.educont-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* espacio entre tarjetas */
+}
+
+/* Cada educont-card ocupará casi 1/3 menos el gap */
+.educont-flex .educont-card {
+  flex: 1 1 calc(33.333% - 1rem);
+  max-width: calc(33.333% - 1rem);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.educont-flex .educont-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+/* Wrapper que fija proporción 4:3 y recorta */
+.educont-card__media {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.educont-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Cuerpo solo para el título */
+.educont-card__body {
+  padding: 0.5rem 0;
+  text-align: center;
+  /* para que todas las bodies empiecen en la misma altura */
+  flex-shrink: 0;
+}
+
+.educont-card__body h5 {
+  margin: 0;
+  font-size: 1rem;
+  color: #1b264f;
+  line-height: 1.2;
+}
+
+/* Responsive: en pantallas <992px quepa 2 por fila */
+@media (max-width: 991px) {
+  .educont-flex .educont-card {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
+
+/* En móviles (<576px) 1 por fila */
+@media (max-width: 575px) {
+  .educont-flex .educont-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
 /*--------------------- Cursos IA -------------------------------------------*/
 
 /* contenedor flex para Cursos IA */
