@@ -245,6 +245,34 @@
   }
 }
 
+/*--------------------- PROGRAMAS FEDERALES -------------------------------------------*/
+
+/* contenedor flex que envuelve todas las tarjetas */
+.ofertas-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centra la hilera */
+  gap: 2rem; /* espacio entre tarjetas */
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+/* cada tarjeta toma un ancho base y crece/encioge */
+.pfederales-card {
+  flex: 1 1 180px; /* base 180px, puede crecer ó encoger */
+  max-width: 260px; /* opcional: límite de crecimiento */
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* imagen dentro de la tarjeta */
+.oferta-card__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /*--------------------- CALL CENTER -------------------------------------------*/
 
 /* CSS específico para las imágenes de Call Center */
