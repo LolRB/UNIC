@@ -135,12 +135,42 @@
 
 /*--------------------- Cursos IA -------------------------------------------*/
 
-/* ————— Cursos IA: sólo dos por fila en desktop ————— */
+/* contenedor flex para Cursos IA */
+.cursos-ia-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* espacio entre tarjetas */
+  padding: 1rem 0;
+}
+
+/* base para móviles: full-width responsivo */
+.cursos-ia-flex .cap-card {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+/* a partir de 576px: dos por fila */
+@media (min-width: 576px) {
+  .cursos-ia-flex .cap-card {
+    flex: 0 0 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
+
+/* a partir de 992px: sigue 2 por fila pero puede ser un poco más estrecho si quieres */
 @media (min-width: 992px) {
   .cursos-ia-flex .cap-card {
-    /* Cálculo: 2 tarjetas menos el gap */
-    flex: 0 0 calc(50% - 1rem);
-    max-width:  calc(50% - 1rem);
+    flex: 0 0 calc(50% - 1rem); /* cada tarjeta = 50% ancho menos espacio */
+    max-width: calc(50% - 1rem);
+  }
+}
+
+/* opcional: en pantallas XL limitar crecimiento */
+@media (min-width: 1200px) {
+  .cursos-ia-flex .cap-card {
+    flex: 0 0 480px; /* fija un max-ancho razonable */
+    max-width: 480px;
   }
 }
 
