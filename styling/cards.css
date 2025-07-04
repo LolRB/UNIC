@@ -263,7 +263,14 @@
   max-width: 260px; /* opcional: límite de crecimiento */
   border-radius: 0.5rem;
   overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: border-radius 0.2s, box-shadow 0.2s;
+}
+
+.pfederales-card:hover {
+  border-radius: 50%; /* convierte todo el enlace en círculo */
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15); /* sombra circular */
+  transform: translateY(-5px);
+  z-index: 1;
 }
 
 /* imagen dentro de la tarjeta */
