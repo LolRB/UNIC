@@ -152,7 +152,6 @@
   flex-direction: column;
   overflow: hidden;
   border-radius: 0.5rem;
-  background: #fff;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .educont-flex .educont-card:hover {
