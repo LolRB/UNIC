@@ -349,3 +349,45 @@
 .custom-purple-border {
   border-bottom: 4px solid rgba(146, 54, 131, 255) !important;
 }
+
+/*------------------- INSTALACIONES ------------------------------*/
+
+/* ——— GRID DE INSTALACIONES ——— */
+.instalaciones-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* espacio entre items */
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+/* cada “celda” */
+.instalacion-item {
+  flex: 1 1 calc(33.333% - 1rem);
+  max-width: calc(33.333% - 1rem);
+}
+
+/* la propia imagen */
+.instalacion-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+/* responsivo: 2 por fila en tablet */
+@media (max-width: 991px) {
+  .instalacion-item {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
+
+/* responsivo: 1 por fila en móvil */
+@media (max-width: 575px) {
+  .instalacion-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
